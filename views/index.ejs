@@ -29,7 +29,7 @@
             <%blogs.forEach((blog) => { %>
               <a href="/blogs/<%= blog._id%>" >
                 <div class="post">
-                    <div id="post-image"  data-image = <%= blog.image %>></div>
+                    <img src="/uploads/<%= blog.image %>" id="post-image" >
                     <div class="post-content">
                         <div class="post-content-title"><%= blog.title %></div>
                         <div class="post-content-text"><%= blog.body %></div>
@@ -50,9 +50,5 @@
     <footer>
         <p>Made with &#x1F9E1; by Chintan Suthar</p>
     </footer>
-    <script>
-      const postImage = document.getElementById("post-image");
-      postImage.style.backgroundImage = `url("/uploads/${postImage.dataset.image}")`
-    </script>
   </body>
 </html>
