@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add New Blog</title>
+    <title>Updates Blog</title>
     <%- include("./createStyle") %>
 </head>
 <body>
@@ -13,10 +13,10 @@
     </header>
     <div class="main">
         <div id="btn">
-            <a  href="/blogs"><button>Back</button></a>
+            <a  href="/blogs?token=<%= token%>"><button>Back</button></a>
         </div>
         <div class="form" >
-            <form action = "/blogs/update/<%= blog._id %>" method="POST"  >
+            <form action = "/blogs/update/<%= blog._id %>?token=<%= token%>" method="POST"  >
                 <label for="title"> <b>Title :</b> </label>
                 <input type="text" id="title" name="title" placeholder="Blog Title" value=<%= blog.title%> required>
                 <div style="display: flex;">
